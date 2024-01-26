@@ -1,0 +1,22 @@
+{
+  "name": "express-api-in-10-minutes",
+  "version": "1.0.0",
+  "description": "Welcome to the ExpressFakeStoreAPIPlayground, a delightful repository showcasing a basic Express API that interacts with the FakeStore API. This playful API serves as an excellent starting point for understanding how to handle various HTTP requests using Postman.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mudgal-cmd/express-api-in-10-minutes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mudgal-cmd/express-api-in-10-minutes/issues"
+  },
+  "homepage": "https://github.com/mudgal-cmd/express-api-in-10-minutes#readme",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
