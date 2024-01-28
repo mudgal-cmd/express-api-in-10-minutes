@@ -1,11 +1,23 @@
-const userData = require('./data/user');
+const express = require('express');
 
-const productData = require('./data/products');
+const app = express();
 
-userData().then(data => {
-  console.log(data);
-}).catch(err => console.log(`Error: ${err}`));
+const authRouter = require('./routes/auth-routes');
 
-productData().then(data => {
-  console.log(data);
-}).catch(err => console.log(`Error: ${err}`));
+const mainRequestsRouter = require('./routes/app-requests-routes');
+
+const cookieParser = require('cookie-parser');
+
+// app.use(cookieParser());
+
+app.use(cookieParser('secret-key'));
+
+app.use('/login', authRouter);
+
+app.use('/Users', mainRequestsRouter);
+
+app.use('/Products', mainRequestsRouter);
+
+app.listen(5000, ()=>{
+  console.log('Server is listening on port 5000...');
+});
